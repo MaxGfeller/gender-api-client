@@ -1,0 +1,33 @@
+{
+  "name": "gender-api-client",
+  "version": "1.0.0",
+  "description": "Guess the gender for a given name. Uses the gender-api.com API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tape tests/test-*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaxGfeller/gender-api-client.git"
+  },
+  "keywords": [
+    "gender",
+    "guess",
+    "guesser",
+    "male",
+    "female"
+  ],
+  "author": "Max Gfeller <max.gfeller@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxGfeller/gender-api-client/issues"
+  },
+  "homepage": "https://github.com/MaxGfeller/gender-api-client",
+  "devDependencies": {
+    "standard": "^3.5.0",
+    "tape": "^4.0.0"
+  },
+  "dependencies": {
+    "concat-stream": "^1.4.8"
+  }
+}
