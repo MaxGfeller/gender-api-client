@@ -2,7 +2,7 @@ var https = require('https')
 var querystring = require('querystring')
 var concat = require('concat-stream')
 
-const BASE_URL = 'https://gender-api.com/get?'
+var BASE_URL = 'https://gender-api.com/get?'
 
 module.exports = function (name, cb) {
   var query = querystring.stringify({ name: name })
