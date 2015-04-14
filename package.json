@@ -1,6 +1,6 @@
 {
   "name": "gender-api-client",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Guess the gender for a given name. Uses the gender-api.com API.",
   "main": "index.js",
   "scripts": {
