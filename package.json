@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "concat-stream": "^1.4.8",
-    "is-array": "^1.0.1"
+    "is-array": "^1.0.1",
+    "is-email": "^0.1.1"
   }
 }

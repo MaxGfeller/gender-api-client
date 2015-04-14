@@ -27,3 +27,12 @@ test('A couple of names', function (t) {
     t.end()
   })
 })
+
+test('Look up email address', function (t) {
+  gender('max.gfeller@gmail.com', function (err, gender, details) {
+    t.notOk(err, 'no error')
+    t.equals(gender, 'male', 'gender is male')
+    t.ok(details, 'details must be set')
+    t.end()
+  })
+})

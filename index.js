@@ -2,6 +2,7 @@ var https = require('https')
 var querystring = require('querystring')
 var concat = require('concat-stream')
 var isArray = require('is-array')
+var isEmail = require('is-email')
 
 var BASE_URL = 'https://gender-api.com/get?'
 
@@ -16,9 +17,10 @@ module.exports = function (name, opts, cb) {
     multipleNames = true
     name = name.join(';')
   }
+  var queryObject = {}
+  isEmail(name) ? queryObject.email = name : queryObject.name = name
 
-  var query = querystring.stringify({ name: name })
-  https.get(BASE_URL + query, function (res) {
+  https.get(BASE_URL + querystring.stringify(queryObject), function (res) {
     if (res.statusCode !== 200) return cb(new Error('API call failed'))
 
     res.pipe(concat(function (body) {
