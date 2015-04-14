@@ -27,6 +27,8 @@ module.exports = function (name, opts, cb) {
       try {
         var response = JSON.parse(body)
 
+        if (response.errno) return cb(new Error(response.errmsg))
+
         if (multipleNames === true) {
           var parsedResult = {}
           response.result.map(function (result) {
