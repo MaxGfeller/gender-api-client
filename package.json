@@ -28,6 +28,7 @@
     "tape": "^4.0.0"
   },
   "dependencies": {
-    "concat-stream": "^1.4.8"
+    "concat-stream": "^1.4.8",
+    "is-array": "^1.0.1"
   }
 }
