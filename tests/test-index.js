@@ -36,3 +36,21 @@ test('Look up email address', function (t) {
     t.end()
   })
 })
+
+test('Andrea in german', function (t) {
+  gender('andrea', { country: 'germany' }, function (err, gender, details) {
+    t.notOk(err, 'no error')
+    t.equals(gender, 'female', 'in germany, andrea is female')
+    t.ok(details, 'details must be set')
+    t.end()
+  })
+})
+
+test('Andrea in german', function (t) {
+  gender('andrea', { country: 'italy' }, function (err, gender, details) {
+    t.notOk(err, 'no error')
+    t.equals(gender, 'male', 'in italy, andrea is male')
+    t.ok(details, 'details must be set')
+    t.end()
+  })
+})
