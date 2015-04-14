@@ -16,3 +16,14 @@ test('Invalid name', function (t) {
     t.end()
   })
 })
+
+test('A couple of names', function (t) {
+  gender(['Max', 'Jan', 'Susanna', 'Peter'], function (err, genders, details) {
+    t.notOk(err, 'no error')
+    t.equals(typeof genders, 'object', 'must be an object in this case')
+    t.equals(genders['max'], 'male', 'max is male')
+    t.equals(genders['susanna'], 'female', 'susanna is female')
+    t.ok(details, 'details must be set')
+    t.end()
+  })
+})
